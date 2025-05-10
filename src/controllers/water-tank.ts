@@ -13,3 +13,16 @@ export const createWaterTankEntry = async (
     next(e);
   }
 };
+
+export const getWaterTankEntries = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    const entries = await waterTankService.getWaterTankEntries();
+    res.status(200).json(entries);
+  } catch (e) {
+    next(e);
+  }
+};

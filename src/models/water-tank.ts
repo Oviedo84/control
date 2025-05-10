@@ -6,6 +6,14 @@ const waterTankSchema = new Schema(
       type: Number,
       required: true,
     },
+    inflow: {
+      type: Number,
+      required: true,
+    },
+    outflow: {
+      type: Number,
+      required: true,
+    },
   },
   { timestamps: true },
 );
